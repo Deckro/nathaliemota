@@ -8,14 +8,17 @@
 <body>
     <header>
         <div>
-            <p>NATHALIE MOTA</p>
+            <img src="<?php echo get_template_directory_uri().'/assets/img/Logo.png';?>" alt="">
             <nav>
-                <ul>
-                    <li><a href="#">accueil</a></li>
-                    <li><a href="#">à propos</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
+            <?php $menuh = wp_get_nav_menu_items('header');
+                for($i = 0; $i< count($menuh); $i++){?>
+                <div>
+                   <a href="<?php echo $menuh[$i]-> url;?>"><?php echo $menuh[$i]-> title;?></a>
+                </div>
+                <?php                    
+                }
+            ?> 
             </nav>
         </div>
-        
+
     </header>

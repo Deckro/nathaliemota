@@ -1,4 +1,5 @@
 <?php
+
 function themeperso_add_admin_pages() {
     add_menu_page('Paramètres du thème themeperso', 'themeperso', 'manage_options', 'themeperso-settings',
     'themeperso_theme_settings', 'dashicons-admin-settings', 60);
