@@ -4,6 +4,8 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'themeperso', get_template_directory_uri() . '/style.css' );
     wp_enqueue_script('pas encore fais', get_stylesheet_directory_uri() . '/assets/js/menu.js', [], '', true);
 }
+
+
 function themeperso_add_admin_pages() {
     add_menu_page('Paramètres du thème themeperso', 'themeperso', 'manage_options', 'themeperso-settings',
     'themeperso_theme_settings', 'dashicons-admin-settings', 60);

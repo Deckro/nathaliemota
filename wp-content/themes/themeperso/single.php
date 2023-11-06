@@ -33,7 +33,6 @@
             $galerie->the_post();
             echo ' <div class="single_galerie">';
             echo get_the_post_thumbnail( get_the_ID(), 'full' );
-            the_title();
             echo '</div>';       
         } 
     ?>

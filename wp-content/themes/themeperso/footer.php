@@ -1,4 +1,5 @@
 <footer>
+    <?php require_once 'template-parts/footer/modale-contact.php'; ?>
     <div>
         <nav>
         <nav>
@@ -13,9 +14,10 @@
             </nav>
         </nav>
     </div>
-    <?php require_once 'template-parts/footer/modale-contact.php'; ?>
+    
 </footer>
 
+<?php wp_footer(); ?>
 
 </body>
 </html>
