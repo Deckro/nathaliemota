@@ -30,3 +30,22 @@
     letter-spacing: 1.4px;
     text-transform: uppercase; 
 }
+.single_middle{
+    display: flex;
+    justify-content: space-around;
+}
+.single_middle_info{
+    display: flex;
+}
+.single_photos{
+    display: flex;
+    width: 600px;
+    height: 500px;
+    margin: 10px;
+}
+.single_galerie{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
