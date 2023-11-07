@@ -11,11 +11,15 @@
     <h1 class="titre_banner">photographe event</h1>
 
 </div>
-
-<select name="catégorie" id="catégorie"><option value="">Catégorie</option><option value="mariage">mariage</option></select>
-<select name="formats" id="formats"><option value="">formats</option><option value="#">#</option></select>
-<select name="trier_par" id="trier_par"><option value="trier_par">TRIER PAE</option><option value="#">#</option></select>
-
+<div class="selecteur">
+    <div class="select_gauche">
+        <select name="catégorie" id="catégorie"><option value="">Catégorie</option><option value="mariage">mariage</option></select>
+        <select name="formats" id="formats"><option value="">formats</option><option value="#">#</option></select>
+    </div>
+    <div class="select_droit">
+        <select name="trier_par" id="trier_par"><option value="trier_par">Trier par</option><option value="#">#</option></select>
+    </div>
+</div>
 <div class="home_galerie">
     <?php                    
         while ( $galerie->have_posts() ) {
