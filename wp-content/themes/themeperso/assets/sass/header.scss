@@ -1,7 +1,15 @@
+.header{
+    display: flex;
+    justify-content: center;
+    height: 80px;  
+    background: #FFF;
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
+}
 .logonav{
     display: flex;
+    width: 1440px;
     justify-content: space-around;
-    height: 80px;  
+    gap: 150px;
 }
 .logo{
     margin-top: 33px;

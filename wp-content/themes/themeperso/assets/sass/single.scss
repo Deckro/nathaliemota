@@ -1,0 +1,32 @@
+.single{
+    display: flex;
+    justify-content: center;
+}
+.single_top{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1150px;
+    justify-content: space-around;
+    align-items: end;
+}
+.single_top_img{
+    width: 560px;
+    height: 100%;
+}
+.single_top_title{
+    //font-family: Space Mono;
+    width: 420px;
+    font-size: 66px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px; 
+    text-transform: uppercase; 
+}
+.single_top_cat{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-transform: uppercase; 
+}

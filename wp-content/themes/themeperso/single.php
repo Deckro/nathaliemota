@@ -9,15 +9,19 @@
     );
     $galerie = new WP_Query($args);
 ?>
-<div>
-<h2><?php echo $post->post_title;?></h2>
-<p>Référence :<?php echo $fields['reference'];?></p>
-<p>Type :<?php echo $fields['type'];?></p>
-<p>Categorie : <?php echo get_the_terms($post->ID, 'categorie')[0]->name; ?></p>
-<p>Format : <?php echo get_the_terms($post->ID, 'format')[0]->name; ?></p>
-<p>Année :<?php echo $fields['année'];?></p>
+<div class="single">
+    <div class="single_top">
+        <div class="single_top_info">
+            <h2 class="single_top_title"><?php echo $post->post_title;?></h2>
+            <p class="single_top_cat">Référence :<?php echo $fields['reference'];?></p>
+            <p class="single_top_cat">Type :<?php echo $fields['type'];?></p>
+            <p class="single_top_cat">Categorie : <?php echo get_the_terms($post->ID, 'categorie')[0]->name; ?></p>
+            <p class="single_top_cat">Format : <?php echo get_the_terms($post->ID, 'format')[0]->name; ?></p>
+            <p class="single_top_cat">Année :<?php echo $fields['année'];?></p>
+        </div>
+        <img class="single_top_img" src="<?php echo $img;?>" alt="">
+    </div>
 </div>
-<img src="<?php echo $img;?>" alt="">
 <div>
     <p>cette photo vous intéresse?</p>
     <button><a href="#contact">contact</a></button>
