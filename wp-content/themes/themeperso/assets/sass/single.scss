@@ -33,9 +33,17 @@
 .single_middle{
     display: flex;
     justify-content: space-around;
+    gap: 120px;
 }
 .single_middle_info{
     display: flex;
+    margin-top: 40px;
+}
+.single_middle_text{
+    margin-right: 50px;
+}
+.simgle_middle_right{
+    margin-top: 40px;
 }
 .single_photos{
     display: flex;
@@ -49,3 +57,31 @@
     align-items: center;
     justify-content: center;
 }
+.single_middle_btn{
+    width: 260px;
+    height: 50px;
+    border-radius: 2px;
+    background: #D8D8D8;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
+    border: none;
+}
+.single_middle_miniature{
+    height: 70px;
+    width: 80px;
+}
+.single_middle_arrow{
+    display: flex;
+    justify-content: space-around;
+}
+.flex_center{
+    display: flex;
+    justify-content: center;
+}
+.single_bottom{
+    text-align: center;
+}
+.vous{
+    margin-right: 60%;
+}
+
+    

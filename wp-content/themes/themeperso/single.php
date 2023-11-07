@@ -26,18 +26,18 @@
 
 <div class="single_middle">
     <div class="single_middle_info">
-        <p>cette photo vous intéresse?</p>
-        <button><a href="#contact">contact</a></button>
+        <p class="single_middle_text">cette photo vous intéresse?</p>
+        <button class="single_middle_btn"><a href="#contact">contact</a></button>
     </div>
-    <div>
-        <img src="" alt="miniature">
-        <div><img src="" alt=""><img src="" alt=""></div>
+    <div class="simgle_middle_right">
+        <img class="single_middle_miniature"src="<?php echo get_the_post_thumbnail_url($galerie->posts[5]->ID, 'full');?>)" alt="">
+        <div class="single_middle_arrow"><img class="arrow" src="<?php echo get_template_directory_uri().'/assets/img/Line6.svg';?>" alt=""><img class="arrow" src="<?php echo get_template_directory_uri().'/assets/img/Line7.svg';?>" alt=""></div>
     </div>
 </div>
 
 
-<div>
-    <p>VOUS AIMEREZ AUSSI</p>
+<div class="single_bottom">
+    <p class="vous">VOUS AIMEREZ AUSSI</p>
     <div class="single_galerie">
         <?php                    
             while ( $galerie->have_posts() ) {
@@ -49,7 +49,8 @@
         ?>
     </div>
 </div>
-<button id='tout'>Toutes les photos</button>
-
+<div class="flex_center">
+    <button class="single_middle_btn"id='tout'>Toutes les photos</button>
+</div>
 
 <?php get_footer(); ?>
