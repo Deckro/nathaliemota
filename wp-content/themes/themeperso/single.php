@@ -39,18 +39,21 @@
 <div class="single_bottom">
     <p class="vous">VOUS AIMEREZ AUSSI</p>
     <div class="single_galerie">
-        <?php                    
-            while ( $galerie->have_posts() ) {
+        <?php 
+            $compteur = 0;                   
+            while ( $galerie->have_posts() ) {  
                 $galerie->the_post();
-                echo ' <div class="single_photos">';
+                $cacher = $compteur>1?"cacher":"";
+                echo ' <div class="photos '.$cacher.'"><a href="'.get_post_permalink().'">';
                 echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                echo '</div>';       
+                echo '</a></div>';  
+                $compteur ++;
             } 
         ?>
     </div>
 </div>
 <div class="flex_center">
-    <button class="single_middle_btn"id='tout'>Toutes les photos</button>
+    <button class="single_middle_btn" id='tout'>Toutes les photos</button>
 </div>
 
 <?php get_footer(); ?>

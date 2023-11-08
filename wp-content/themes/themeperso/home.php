@@ -22,15 +22,18 @@
 </div>
 <div class="home_galerie">
     <?php                    
-        while ( $galerie->have_posts() ) {
+        $compteur = 0;                   
+        while ( $galerie->have_posts() ) {  
             $galerie->the_post();
-            echo '<div class="home_photos">';
-            echo get_the_post_thumbnail( get_the_ID(), '[1200,800]' );
-            echo '</div>';       
+            $cacher = $compteur>7?"cacher":"";
+            echo '<div class="photos '.$cacher.'"><a href="'.get_post_permalink().'">';
+            echo get_the_post_thumbnail( get_the_ID(), 'full' );
+            echo '</a></div>';  
+            $compteur ++;       
         } 
     ?>
 </div>
 <div class="charger_btn">
-    <button class="charger">charger plus</button>
+    <button class="charger" id="plus">charger plus</button>
 </div>
 <?php get_footer(); ?>

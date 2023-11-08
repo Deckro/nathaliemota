@@ -45,12 +45,6 @@
 .simgle_middle_right{
     margin-top: 40px;
 }
-.single_photos{
-    display: flex;
-    width: 600px;
-    height: 500px;
-    margin: 10px;
-}
 .single_galerie{
     display: inline-flex;
     flex-wrap: wrap;
@@ -82,6 +76,9 @@
 }
 .vous{
     margin-right: 60%;
+}
+.cacher{
+    display: none;
 }
 
     
