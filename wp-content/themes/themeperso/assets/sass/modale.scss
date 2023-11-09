@@ -1,11 +1,16 @@
 .formecontact{
     width: 597px;
-    height: 769px;
-    display: flex;
+    height: 730px;
+    display: none;
     justify-content: center;
     border: 5px solid #000;
     background: #FFF; 
     overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
 }
 .wpcf7-text{
     width: 260px;
@@ -35,4 +40,7 @@ label{
     font-size: 48px;
     margin: 0;
     text-transform: uppercase;
+}
+.formactive{
+    display: flex;
 }

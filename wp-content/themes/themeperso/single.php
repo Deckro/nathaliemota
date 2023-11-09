@@ -53,7 +53,7 @@
     </div>
 </div>
 <div class="flex_center">
-    <button class="single_middle_btn" id='tout'>Toutes les photos</button>
+    <button class="charger" id='tout'>Toutes les photos</button>
 </div>
 
 <?php get_footer(); ?>
