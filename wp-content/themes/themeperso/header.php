@@ -17,7 +17,7 @@
                     <img class="logo" src="<?php echo get_template_directory_uri().'/assets/img/Logo.png';?>" alt="">
                 </div>
                 <div>
-                <nav class="flex nav_header">
+                <nav class="nav_header">
                 <?php $menuh = wp_get_nav_menu_items('header');
                     for($i = 0; $i< count($menuh); $i++){?>
                     <div>
@@ -27,6 +27,14 @@
                     }
                 ?> 
                 </nav>
+                <div><a id ="closeBtn" class="close">x</a></div>
+                <div id="openBtn" class="iconeburger">
+                    <a href="#">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
                 </div>
             </div>
         </div>

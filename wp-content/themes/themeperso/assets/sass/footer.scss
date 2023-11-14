@@ -11,3 +11,16 @@ a{
     text-decoration: none;
     color: black;
 }
+@media screen and (max-width: 765px){
+    .nav_footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-top: 1px solid black;
+        gap: 10px;
+        padding-top: 20px;
+        margin-bottom: 15px;
+    }
+}
