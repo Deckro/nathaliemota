@@ -6,11 +6,19 @@ function theme_enqueue_styles() {
     wp_enqueue_script('modale', get_stylesheet_directory_uri() . '/assets/js/modale.js', [], '', true);
 }
 
+register_nav_menus(
+    array(
+        'primary' => esc_html__( 'Primary menu', 'themeperso' ),
+        'footer'  => esc_html__( 'Secondary menu', 'themeperso' ),
+    )
+);
+
 
 function themeperso_add_admin_pages() {
     add_menu_page('Paramètres du thème themeperso', 'themeperso', 'manage_options', 'themeperso-settings',
     'themeperso_theme_settings', 'dashicons-admin-settings', 60);
 }
+
 function themeperso_theme_settings() {
     echo '<h1>'.esc_html( get_admin_page_title() ).'</h1>';
     echo '<form action="options.php" method="post" name="themeperso_settings">';
@@ -31,8 +39,10 @@ function themeperso_settings_fields_validate($inputs) {
         } 
         if(!empty($_POST['themeperso_settings_field_email'])) {
            update_option('themeperso_settings_field_email', $_POST['themeperso_settings_field_email']);
-        }}
-        return $inputs; }
+        }
+    }
+    return $inputs; 
+}
 add_action('admin_menu', 'themeperso_add_admin_pages', 10);
 function themeperso_settings_register() {
     register_setting('themeperso_settings_fields', 'themeperso_settings_fields', 'themeperso_settings_fields_validate');

@@ -1,99 +1,88 @@
 .single{
-    display: flex;
     justify-content: center;
     text-align: center;
+    .top{
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: end;
+        .info{
+            width: 49%;
+            text-align: initial;
+            border-bottom: 1px solid black;
+            margin-right: 21px;
+            text-transform: uppercase;
+            .title{
+                width: 420px;
+                font-size: 66px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 58px; 
+            }
+            .cat{
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.4px; 
+            }
+        }
+        .img{
+            width: 49%;
+            height: 95%;
+        }
+    }
+    .middle{
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        margin: auto;
+        width: 100%;
+        .info{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            .text{
+                margin-right: 50px;
+            }
+            .btn{
+                width: 260px;
+                height: 50px;
+                border-radius: 2px;
+                background: #D8D8D8;
+                box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
+                border: none;
+            }
+        }
+        .right{
+            margin-top: 8px;
+            .miniature{
+                height: 80px;
+                width: 80px;
+                display: none;
+            }
+            .arrow{
+                justify-content: space-around;
+                .fleche{
+                    width: 40%;
+                    height: 50%;
+                }
+            }
+        }
+    }
+    .vous{
+        margin-top: 70px;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    .galerie{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
-.single_top{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: center;
-    align-items: end;
-}
-.single_top_info{
-    width: 45%;
-    text-align: initial;
-    border-bottom: 1px solid black;
-    margin-right: 21px;
-}
-.single_top_img{
-    width: 33vw;
-    height: 90vh;
-}
-.single_top_title{
-    //font-family: Space Mono;
-    width: 420px;
-    font-size: 66px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 58px; 
-    text-transform: uppercase; 
-}
-.single_top_cat{
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.4px;
-    text-transform: uppercase; 
-}
-.single_middle{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-    margin: auto;
-    width: 71%;
-}
-.single_middle_info{
-    display: flex;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.single_middle_text{
-    margin-right: 50px;
-}
-.simgle_middle_right{
-    margin-top: 8px;
-}
-.single_galerie{
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.single_middle_btn{
-    width: 260px;
-    height: 50px;
-    border-radius: 2px;
-    background: #D8D8D8;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
-    border: none;
-}
-.single_middle_miniature{
-    height: 70px;
-    width: 80px;
-}
-.single_middle_arrow{
-    display: flex;
-    justify-content: space-around;
-}
-.flex_center{
-    display: flex;
-    justify-content: center;
-}
-.single_bottom{
-    text-align: center;
-}
-.vous{
-    margin-right: 60%;
-    margin-top: 70px;
-    margin-bottom: 50px;
+
+.activemini{
+    display: block;
 }
 .cacher{
     display: none;
 }
-.arrow{
-    width: 40%;
-    height: 50%;
-}
-    
+

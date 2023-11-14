@@ -11,13 +11,13 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <div class="logonav">
+        <div class="flex header">
+            <div class="flex logonav">
                 <div>
                     <img class="logo" src="<?php echo get_template_directory_uri().'/assets/img/Logo.png';?>" alt="">
                 </div>
                 <div>
-                <nav class="nav_header">
+                <nav class="flex nav_header">
                 <?php $menuh = wp_get_nav_menu_items('header');
                     for($i = 0; $i< count($menuh); $i++){?>
                     <div>

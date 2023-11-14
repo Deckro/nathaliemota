@@ -9,42 +9,54 @@
     );
     $galerie = new WP_Query($args);
 ?>
-<div class="single">
-    <div class="single_top">
-        <div class="single_top_info">
-            <h2 class="single_top_title"><?php echo $post->post_title;?></h2>
-            <p class="single_top_cat">Référence :<?php echo $fields['reference'];?></p>
-            <p class="single_top_cat">Type :<?php echo $fields['type'];?></p>
-            <p class="single_top_cat">Categorie : <?php echo get_the_terms($post->ID, 'categorie')[0]->name; ?></p>
-            <p class="single_top_cat">Format : <?php echo get_the_terms($post->ID, 'format')[0]->name; ?></p>
-            <p class="single_top_cat">Année :<?php echo $fields['année'];?></p>
+<div class="single flex">
+    <div class="top flex">
+        <div class="info">
+            <h2 class="title"><?php echo $post->post_title;?></h2>
+            <p class="cat">Référence :<?php echo $fields['reference'];?></p>
+            <p class="cat">Type :<?php echo $fields['type'];?></p>
+            <p class="cat">Categorie : <?php echo get_the_terms($post->ID, 'categorie')[0]->name; ?></p>
+            <p class="cat">Format : <?php echo get_the_terms($post->ID, 'format')[0]->name; ?></p>
+            <p class="cat">Année :<?php echo $fields['année'];?></p>
         </div>
-        <img class="single_top_img" src="<?php echo $img;?>" alt="">
-    </div>
-</div>
-    
-
-<div class="single_middle">
-    <div class="single_middle_info">
-        <p class="single_middle_text">cette photo vous intéresse?</p>
-        <button class="single_middle_btn"><a href="#contact">contact</a></button>
-    </div>
-    <div class="simgle_middle_right">
-        <img class="single_middle_miniature"src="<?php echo get_the_post_thumbnail_url($galerie->posts[5]->ID, 'full');?>)" alt="">
-        <div class="single_middle_arrow"><img class="arrow" src="<?php echo get_template_directory_uri().'/assets/img/Line6.svg';?>" alt=""><img class="arrow" src="<?php echo get_template_directory_uri().'/assets/img/Line7.svg';?>" alt=""></div>
+        <img class="img" src="<?php echo $img;?>" alt="">
     </div>
 </div>
 
+<div class="single"> 
+    <div class="flex middle">
+        <div class="flex info">
+            <p class="text">cette photo vous intéresse?</p>
+            <button class="btn"><a href="#contact">contact</a></button>
+        </div>
+        <div class="right">
+        <?php
+            $first = true;
+            while ($galerie->have_posts() ) {
+                            $galerie->the_post();
+                            if(get_the_ID()!= $post->ID){
+                                $class = $first?'activemini':'';
+                            echo ' <div class="miniature '.$class.'">';
+                            echo get_the_post_thumbnail_url(  get_the_ID(), 'full');
+                            echo '</div>';
+                            $first = false;       
+            }} 
+            ?>            
+            <div class="flex arrow"><img id="left" class="fleche" src="<?php echo get_template_directory_uri().'/assets/img/Line6.svg';?>" alt=""><img id="right"class="fleche" src="<?php echo get_template_directory_uri().'/assets/img/Line7.svg';?>" alt=""></div>
+        </div>
+    </div>
+</div>
 
-<div class="single_bottom">
+
+<div class="single">
     <p class="vous">VOUS AIMEREZ AUSSI</p>
-    <div class="single_galerie">
+    <div class="galerie">
         <?php 
             $compteur = 0;                   
             while ( $galerie->have_posts() ) {  
                 $galerie->the_post();
                 $cacher = $compteur>1?"cacher":"";
-                echo ' <div class="photos '.$cacher.'"><a href="'.get_post_permalink().'">';
+                echo ' <div class="flex photos '.$cacher.'"><a href="'.get_post_permalink().'">';
                 echo get_the_post_thumbnail( get_the_ID(), 'full' );
                 echo '</a></div>';  
                 $compteur ++;
@@ -52,8 +64,10 @@
         ?>
     </div>
 </div>
-<div class="flex_center">
+<div class="flex center">
     <button class="charger" id='tout'>Toutes les photos</button>
 </div>
 
 <?php get_footer(); ?>
+
+

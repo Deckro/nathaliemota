@@ -1,13 +1,20 @@
-.formecontact{
-    width: 597px;
-    height: 730px;
+.pasvisible{
+    position: fixed;
+    width: 100%;
     display: none;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+.formecontact{
+    width: 560px;
+    height: 760px;
     justify-content: center;
     border: 5px solid #000;
     background: #FFF; 
     overflow: hidden;
-    position: fixed;
-    z-index: 2;
+    position: relative;
     left: 50%;
     top: 30px;
     transform: translateX(-50%);
@@ -22,7 +29,7 @@
 }
 .champs{
     width: 265px;
-    margin-left: 33%;
+    margin-left: 30%;
 }
 label{
     font-weight: bold;
@@ -37,10 +44,14 @@ label{
     border: none;
 }
 .ligne{
-    font-size: 48px;
+    font-size: 57px;
+    font-style: italic;
     margin: 0;
     text-transform: uppercase;
 }
 .formactive{
     display: flex;
+}
+.deux{
+    margin-left: 40px;
 }
