@@ -25,7 +25,9 @@
 .photos{
     margin: 10px;
     flex: 1 1 45%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
+    max-width: 763px;
+    max-height: 763px;
 }
 .charger{
     width: 260px;
