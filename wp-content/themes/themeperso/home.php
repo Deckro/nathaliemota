@@ -25,9 +25,14 @@
         'tax_query' => $taxo
     );
     $galerie = new WP_Query($args);
+    $arg = array(
+        'post_type' => 'photo',
+        'posts_per_page' => -1,
+    );
+    $gal = new WP_Query($arg);
 ?>
 
-<div class="flex center banner" style="background-image: url(<?php echo get_the_post_thumbnail_url($galerie->posts[rand(0,count($galerie->posts)-1)]->ID, '[763,763]');?>)"> 
+<div class="flex center banner" style="background-image: url(<?php echo get_the_post_thumbnail_url($gal->posts[rand(0,count($gal->posts)-1)]->ID, 'full');?>)"> 
     <h1 class="flex titre_banner">photographe event</h1>
 
 </div>
@@ -37,7 +42,6 @@
             <select class="filtre" name="catégorie" id="catégorie">
                 <option value="">Catégorie</option>
                 <?php
-                var_dump($categories);
                 for($i=0; $i<count($cat); $i++) {
                     $selected = $cat[$i]->slug==$categories?"selected":"";
                     echo '<option '.$selected.' value="'.$cat[$i]->slug.'">'.$cat[$i]->name.'</option>';
@@ -47,7 +51,6 @@
             <select class="filtre" name="formats" id="formats">
                 <option value="">formats</option>
                 <?php
-                var_dump($formats);
                 for($i=0; $i<count($for); $i++) {
                     $selecteds = $for[$i]->slug==$formats?"selected":"";
                     echo '<option '.$selecteds.' value="'.$for[$i]->slug.'">'.$for[$i]->name.'</option>';

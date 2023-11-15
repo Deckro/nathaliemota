@@ -65,7 +65,7 @@
     </div>
 </div>
 <div class="flex center">
-    <button class="charger" id='tout'>Toutes les photos</button>
+    <button class="charger none" id='tout'>Toutes les photos</button>
 </div>
 
 <?php get_footer(); ?>

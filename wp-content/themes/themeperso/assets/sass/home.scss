@@ -67,3 +67,11 @@ select{
     background: var(--White, #FFF); 
     text-transform: uppercase;
 }
+@media screen and (max-width: 778px){
+    .home_galerie{
+        flex-direction: column;
+    }
+    .titre_banner{
+        font-size: 27px;
+    }
+}
