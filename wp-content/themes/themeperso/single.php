@@ -6,8 +6,14 @@
     $args = array(
         'post_type' => 'photo',
         'posts_per_page' => -1,
-    );
+        'tax_query' =>  array(array ( 
+            'taxonomy' => 'categorie',
+            'field' => 'slug',
+            'terms' => get_the_terms($post->ID, 'categorie')[0]->slug
+        )
+    ));
     $galerie = new WP_Query($args);
+    $current_post_id = $post->ID;
 ?>
 <div class="single flex">
     <div class="top flex">
@@ -27,17 +33,17 @@
     <div class="flex middle">
         <div class="flex info">
             <p class="text">cette photo vous intéresse?</p>
-            <button class="btn"><a href="#contact">contact</a></button>
+            <button id="middlecontact" class="btn"><a href="#contact">contact</a></button>
         </div>
         <div class="right">
         <?php
             $first = true;
             while ($galerie->have_posts() ) {
                             $galerie->the_post();
-                            if(get_the_ID()!= $post->ID){
+                            if(get_the_ID()!= $current_post_id){
                                 $class = $first?'activemini':'';
                             echo ' <div class="miniature '.$class.'">';
-                            echo get_the_post_thumbnail_url(  get_the_ID(), 'full');
+                            echo get_the_post_thumbnail(  get_the_ID(), 'full');
                             echo '</div>';
                             $first = false;       
             }} 
@@ -55,12 +61,13 @@
             $compteur = 0;                   
             while ( $galerie->have_posts() ) {  
                 $galerie->the_post();
+                if(get_the_ID()!= $current_post_id){
                 $cacher = $compteur>1?"cacher":"";
                 echo ' <div class="flex photos '.$cacher.'"><a href="'.get_post_permalink().'">';
                 echo get_the_post_thumbnail( get_the_ID(), 'full' );
                 echo '</a></div>';  
                 $compteur ++;
-            } 
+            }} 
         ?>
     </div>
 </div>

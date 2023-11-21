@@ -4,6 +4,7 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'themeperso', get_template_directory_uri() . '/style.css' );
     wp_enqueue_script('filtre', get_stylesheet_directory_uri() . '/assets/js/filtre.js', [], '', true);
     wp_enqueue_script('modale', get_stylesheet_directory_uri() . '/assets/js/modale.js', [], '', true);
+    wp_enqueue_script('menu', get_stylesheet_directory_uri() . '/assets/js/menu.js', [], '', true);
 }
 
 register_nav_menus(

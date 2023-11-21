@@ -9,7 +9,7 @@
             width: 49%;
             text-align: initial;
             border-bottom: 1px solid black;
-            margin-right: 21px;
+            margin-right: 1%;
             text-transform: uppercase;
             .title{
                 width: 420px;
@@ -78,9 +78,9 @@
         align-items: center;
     }
 }
-
+/* pour le js de la miniature*/
 .activemini{
-    display: block;
+    display: block !important;
 }
 .cacher{
     display: none;

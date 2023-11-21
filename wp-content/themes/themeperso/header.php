@@ -14,10 +14,10 @@
         <div class="flex header">
             <div class="flex logonav">
                 <div>
-                    <img class="logo" src="<?php echo get_template_directory_uri().'/assets/img/Logo.png';?>" alt="">
+                    <a href="/"><img class="logo" src="<?php echo get_template_directory_uri().'/assets/img/Logo.png';?>" alt=""></a>
                 </div>
                 <div>
-                <nav class="nav_header">
+                <nav id ="sidenav" class="nav_header">
                 <?php $menuh = wp_get_nav_menu_items('header');
                     for($i = 0; $i< count($menuh); $i++){?>
                     <div>
