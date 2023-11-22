@@ -5,14 +5,14 @@
         flex-wrap: wrap;
         width: 100%;
         align-items: end;
+        gap: 1%;
         .info{
-            width: 49%;
+            width: 50%;
             text-align: initial;
             border-bottom: 1px solid black;
-            margin-right: 1%;
             text-transform: uppercase;
             .title{
-                width: 420px;
+                width: 50%;
                 font-size: 66px;
                 font-style: italic;
                 font-weight: 400;
