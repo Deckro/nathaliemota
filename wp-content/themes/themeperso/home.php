@@ -97,7 +97,7 @@
                 </div>
             </div>';
             echo get_the_post_thumbnail( get_the_ID(), 'full' );
-            echo '</a></div>';  
+            echo '</div>';  
             $compteur ++;       
         } 
     ?>
