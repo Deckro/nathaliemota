@@ -1,7 +1,6 @@
 const modaleOuverture = document.getElementsByClassName('modale_ouverture')[0]
 const pasVisible = document.getElementsByClassName('pasvisible')[0]
 const cadre = document.getElementsByClassName('cadre')[0]
-const eye = document.getElementById('eye')
 const lightBox = document.getElementsByClassName('lightbox')[0]
 const formeContact = document.getElementsByClassName('formecontact')[0]
 const modaleCacher = document.getElementsByClassName('modalecacher')[0]

@@ -80,6 +80,17 @@ option{
     .titre_banner{
         font-size: 27px;
     }
+    .select_droit{
+        display: none;
+    }
+    #choix{
+        display: inherit;
+    }
+    .banner{
+        width: 100%;
+        height: 250px;
+
+    }
 }
 option:hover {
     background-color: red;

@@ -19,9 +19,8 @@
     left: 0;
 }
 .lightbox_img{
-    width: 40%;
+    width: auto;
     height: 70%;
-    aspect-ratio: 1/1;
     position: absolute;
     left: 50%;
     top: 20%;
@@ -44,7 +43,7 @@
     height: 50px;
     color: white;
     position: absolute;
-    left: 15%;
+    left: 5%;
     top: 50%;
     display: flex;
 }
@@ -63,7 +62,7 @@
     height: 50px;
     position: absolute;
     display: flex;
-    right: 15%;
+    right: 5%;
     top: 50%;
     color: white;
 }
@@ -109,8 +108,6 @@
     height: 50px;
     top: 1%;
     right: 2%;
-    background-color: black;
-    border-radius: 50%;
 }
 .titre_img{
     display: flex;

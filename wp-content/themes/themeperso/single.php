@@ -66,7 +66,9 @@
                 echo ' <div class="flex photos '.$cacher.'">
                 <div class="hover">
                     <img id="cadre" class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
-                    <img class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
+                    <a href="'.get_post_permalink().'">
+                        <img class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
+                    </a>
                     <p class="titre_img">'.get_the_title().'</p>
                     <p class="categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
                 </div>
