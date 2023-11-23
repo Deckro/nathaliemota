@@ -1,11 +1,11 @@
 const modaleOuverture = document.getElementsByClassName('modale_ouverture')[0]
 const pasVisible = document.getElementsByClassName('pasvisible')[0]
-const middleContact = document.getElementById('middlecontact')
-const eye = document.getElementsByClassName('eye')[0]
 const cadre = document.getElementsByClassName('cadre')[0]
+const eye = document.getElementById('eye')
 const lightBox = document.getElementsByClassName('lightbox')[0]
 const formeContact = document.getElementsByClassName('formecontact')[0]
 const modaleCacher = document.getElementsByClassName('modalecacher')[0]
+const closeLightBox = document.getElementById('closelightbox')
 
 
 modaleOuverture.addEventListener('click', function(){
@@ -13,9 +13,6 @@ modaleOuverture.addEventListener('click', function(){
 })
 pasVisible.addEventListener('click', function(){
     modaleClose ()
-})
-middleContact.addEventListener('click', function(){
-    modaleOpen ()
 })
 
 function modaleOpen(){
@@ -26,10 +23,18 @@ function modaleClose(){
 }
 
 
-eye.addEventListener('click', function(){
-    lightbox()
+cadre.addEventListener('click', function(){
+    openLightbox()
+})
+closeLightBox.addEventListener('click',function(){
+    closeLightbox()
 })
 
-function lightbox(){
+
+
+function openLightbox(){
     lightBox.classList.add('activebox')
+}
+function closeLightbox(){
+    lightBox.classList.remove('activebox')
 }

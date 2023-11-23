@@ -21,7 +21,7 @@
                 <?php $menuh = wp_get_nav_menu_items('header');
                     for($i = 0; $i< count($menuh); $i++){?>
                     <div>
-                       <a class="<?php echo $menuh[$i]-> classes[0];?>" href="<?php echo $menuh[$i]-> url;?>"><?php echo $menuh[$i]-> title;?></a>
+                       <a class="<?php echo $menuh[$i]-> classes[0];?> hovernav" href="<?php echo $menuh[$i]-> url;?>"><?php echo $menuh[$i]-> title;?></a>
                     </div>
                     <?php                    
                     }

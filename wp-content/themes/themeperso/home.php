@@ -71,8 +71,8 @@
             $cacher = $compteur>7?"cacher":"";
             echo '<div class="flex photos '.$cacher.'">
             <div class="hover">
-                <img id="cadre" class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
-                <img id="eye" class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
+                <img class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
+                <img class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
                 <p class="titre_img">'.get_the_title().'</p>
                 <p class="categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
             </div>
@@ -103,6 +103,6 @@
     ?>
 </div>
 <div class="flex center">
-    <button class="charger" id="tout">charger plus</button>
+    <button class="btn" id="tout">charger plus</button>
 </div>
 <?php get_footer(); ?>

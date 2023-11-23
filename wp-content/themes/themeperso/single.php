@@ -33,7 +33,7 @@
     <div class="flex middle">
         <div class="flex info">
             <p class="text">cette photo vous intéresse?</p>
-            <button id="middlecontact" class="btn"><a href="#contact">contact</a></button>
+            <button id="middlecontact" class="modale_ouverture btn">contact</button>
         </div>
         <div class="right">
         <?php
@@ -66,7 +66,7 @@
                 echo ' <div class="flex photos '.$cacher.'">
                 <div class="hover">
                     <img id="cadre" class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
-                    <img id="eye" class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
+                    <img class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
                     <p class="titre_img">'.get_the_title().'</p>
                     <p class="categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
                 </div>
@@ -98,8 +98,19 @@
     </div>
 </div>
 <div class="flex center">
-    <button class="charger none" id='tout'>Toutes les photos</button>
+    <button class="btn none" id='tout'>Toutes les photos</button>
 </div>
+
+<script>
+const middleContact = document.getElementById('middlecontact')
+
+middleContact.addEventListener('click', function(){
+    modaleOpen ()
+})
+function modaleOpen(){
+    modaleCacher.classList.add('formactive')
+}
+</script>
 
 <?php get_footer(); ?>
 
