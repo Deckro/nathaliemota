@@ -25,6 +25,7 @@ function modaleClose(){
 cadre.addEventListener('click', function(){
     openLightbox()
 })
+
 closeLightBox.addEventListener('click',function(){
     closeLightbox()
 })
