@@ -71,16 +71,16 @@
             $cacher = $compteur>7?"cacher":"";
             echo '<div class="flex photos '.$cacher.'">
             <div class="hover">
-                <img class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
+                <img id="photo_'.$post->ID.'" class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
                 <a href="'.get_post_permalink().'">
                     <img class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
                 </a>
                 <p class="titre_img">'.get_the_title().'</p>
                 <p class="categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
             </div>
-            <div class="lightbox">
+            <div id="light_'.$post->ID.'" class="lightbox">
                 <div>
-                    <a id ="closelightbox" class="close2">x</a>
+                    <a class="closelightbox close2">x</a>
                 </div>
                 <div class="lightbox_img">
                     <a class="light" href="'.get_post_permalink().'">
@@ -90,7 +90,7 @@
                 <p class="light_titre_img">'.get_the_title().'</p>
                 <p class="light_categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
                 <div class="lightbox_left">
-                    <img class="light_box_fleche_left" src="'.get_template_directory_uri().'/assets/img/Line6.svg'.'" alt="">
+                    <img class="white light_box_fleche_left" src="'.get_template_directory_uri().'/assets/img/Line6.svg'.'" alt="">
                     <p class="precedent">precedent</p>
                 </div>
                 <div class="lightbox_right">

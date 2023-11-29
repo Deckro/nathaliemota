@@ -5,7 +5,6 @@ var closeBtn = document.getElementById('closeBtn');
 openBtn.addEventListener('click', function(){
     openBtnNav()
 })
-
 closeBtn.addEventListener('click', function (){
     closeBtnNav()
 })

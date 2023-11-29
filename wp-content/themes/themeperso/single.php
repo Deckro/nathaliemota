@@ -48,7 +48,7 @@
                             $first = false;       
             }} 
             ?>            
-            <div class="flex arrow"><img id="left" class="fleche" src="<?php echo get_template_directory_uri().'/assets/img/Line6.svg';?>" alt=""><img id="right"class="fleche" src="<?php echo get_template_directory_uri().'/assets/img/Line7.svg';?>" alt=""></div>
+            <div class="flex arrow"><img id="left" class="fleche" src="<?php echo get_template_directory_uri().'/assets/img/Line8.svg';?>" alt=""><img id="right"class="fleche" src="<?php echo get_template_directory_uri().'/assets/img/Line9.svg';?>" alt=""></div>
         </div>
     </div>
 </div>

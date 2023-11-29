@@ -21,3 +21,39 @@ function filtre() {
     }
 }
 filtre()
+// slide image miniature 
+let left = document.getElementById('left')
+let right = document.getElementById('right')
+let miniList = document.getElementsByClassName('miniature')
+let currentSlide = 0
+
+console.log(miniList)
+if(left){
+left.addEventListener("click", function () {
+    miniList[currentSlide].classList.remove('activemini')
+	if (
+		currentSlide <= 0
+	){
+		currentSlide = miniList.length-1
+	}
+	else {
+		currentSlide = currentSlide-1
+	}
+    miniList[currentSlide].classList.add('activemini')
+});}
+if(right){
+right.addEventListener("click", function () {
+    miniList[currentSlide].classList.remove('activemini')
+	if (
+		currentSlide+1 >= miniList.length
+	){
+		currentSlide = 0
+	}
+	else {
+		currentSlide = currentSlide+1
+	}
+    miniList[currentSlide].classList.add('activemini')
+	console.log("pour verifier suivant")
+});}
+
+

@@ -73,6 +73,10 @@ option{
     .red:hover{
     background: red !important;
 }}
+
+.white path{
+    fill: #FFF;
+}
 @media screen and (max-width: 778px){
     .home_galerie{
         flex-direction: column;
