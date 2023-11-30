@@ -5,7 +5,9 @@ const formeContact = document.getElementsByClassName('formecontact')[0];
 const modaleCacher = document.getElementsByClassName('modalecacher')[0];
 
 
-modaleOuverture.addEventListener('click', function(){
+modaleOuverture.addEventListener('click', function(ev){
+    const refField = document.querySelector("input[name='your-subject']")
+    refField.value = ''
     modaleOpen ();
 })
 pasVisible.addEventListener('click', function(){
@@ -47,11 +49,16 @@ function closeLightbox(lightBox){
 
 
 // lightbox change slide
-const lightBoxs = document.getElementsByClassName('lightbox')
+
+let lightBoxs = document.querySelectorAll('.photos:not(.cacher) .lightbox')
 const lightBoxS = document.getElementsByClassName('lightbox_right')
 const lightBoxP = document.getElementsByClassName('lightbox_left')
 console.log(lightBoxP, lightBoxS)
 
+
+tout.addEventListener('click', function(){
+    lightBoxs = document.querySelectorAll('.photos:not(.cacher) .lightbox')
+})
 function findcurrentBox(){
     for(i=0; i < lightBoxs.length; i++){
         if(lightBoxs[i].classList.contains('activebox')){

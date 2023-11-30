@@ -15,7 +15,7 @@
     $galerie = new WP_Query($args);
     $current_post_id = $post->ID;
 ?>
-<div class="single flex">
+<div class="single flex marge">
     <div class="top flex">
         <div class="info">
             <h2 class="title"><?php echo $post->post_title;?></h2>
@@ -29,11 +29,11 @@
     </div>
 </div>
 
-<div class="single"> 
+<div class="single marge"> 
     <div class="flex middle">
         <div class="flex info">
             <p class="text">cette photo vous intéresse?</p>
-            <button id="middlecontact" class="modale_ouverture btn">contact</button>
+            <button id="middlecontact" class="modale_ouverture btn" data-ref="<?php echo $fields['reference'];?>">contact</button>
         </div>
         <div class="right">
         <?php
@@ -54,7 +54,7 @@
 </div>
 
 
-<div class="single">
+<div class="single marge">
     <p class="vous">VOUS AIMEREZ AUSSI</p>
     <div class="galerie">
         <?php 
@@ -106,7 +106,9 @@
 <script>
 const middleContact = document.getElementById('middlecontact')
 
-middleContact.addEventListener('click', function(){
+middleContact.addEventListener('click', function(ev){
+    const refField = document.querySelector("input[name='your-subject']")
+    refField.value = ev.currentTarget.dataset.ref
     modaleOpen ()
 })
 function modaleOpen(){

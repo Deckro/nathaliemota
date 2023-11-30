@@ -5,6 +5,7 @@
     $taxo = array();
     $formats = isset($_GET['formats'])?$_GET['formats']:null;
     $categories = isset($_GET['catégorie'])?$_GET['catégorie']:null;
+    $trierPar = isset($_GET['trier_par'])?$_GET['trier_par']:null;
     if($categories != '' && $categories != null){
         $taxo[] = array ( 
             'taxonomy' => 'categorie',
@@ -19,10 +20,16 @@
             'terms' => $formats
         );
     }
+    $order = 'DESC';
+    if($trierPar != '' && $trierPar != null){
+        $order = $trierPar;
+    }
     $args = array(
         'post_type' => 'photo',
         'posts_per_page' => -1,
-        'tax_query' => $taxo
+        'tax_query' => $taxo,
+        'orderby'=> 'post_date', 
+        'order' => $order
     );
     $galerie = new WP_Query($args);
     $arg = array(
@@ -36,9 +43,11 @@
     <h1 class="flex titre_banner">photographe event</h1>
 
 </div>
+<form id="choix" action="">
 <div class="flex selecteur">
-    <div class="flex select_gauche">
-        <form id="choix" action="">
+ 
+        <div class="flex select_gauche">
+        
             <select class="filtre" name="catégorie" id="catégorie" onfocus="this.size=6;"onblur="this.size=0;"onchange="this.size=1; this.blur()">
                 <option value="">Catégorie</option>
                 <?php
@@ -57,13 +66,19 @@
                 }
                 ?>
             </select>
-        </form>
+        
     </div>
     <div class="select_droit">
-        <select name="trier_par" id="trier_par"><option value="trier_par">Trier par</option><option value="#">#</option></select>
+        <select class="filtre" name="trier_par" id="trier_par" onfocus="this.size=6;"onblur="this.size=0;"onchange="this.size=1; this.blur()">
+            <option class="red" value="">Trier par</option>
+            <option class="red" value="DESC">Decroissant</option>
+            <option class="red" value="ASC">Croissant</option>
+        </select>
     </div>
+
 </div>
-<div class="flex center home_galerie">
+</form>
+<div class="flex center home_galerie marge">
     <?php                    
         $compteur = 0;                   
         while ( $galerie->have_posts() ) {  

@@ -54,7 +54,7 @@ img{
 }
 .selecteur{
     justify-content: space-around;
-    margin: 80px 40px 40px 40px;
+    margin: 80px 40px 60px 40px;
 }
 .select_gauche{
     gap: 35px;
@@ -98,3 +98,7 @@ option:hover {
     background-color: red;
 }
 
+.marge{
+    margin-left: 40px;
+    margin-right: 40px;
+}
