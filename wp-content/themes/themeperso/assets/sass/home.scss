@@ -26,8 +26,6 @@
     margin: 10px;
     flex: 1 1 45%;
     aspect-ratio: 1 / 1;
-    max-width: 763px;
-    max-height: 763px;
     position: relative;
 }
 .btn{
@@ -65,8 +63,8 @@ select{
     width: 260px;
     padding: 11px 18px;
     border-radius: 8px;
-    border: 1.3px solid var(--blues-gray-2, #B8BBC2);
-    background: var(--White, #FFF); 
+    border: 1.3px solid #B8BBC2;
+    background: #FFF; 
     text-transform: uppercase;
 }
 option{

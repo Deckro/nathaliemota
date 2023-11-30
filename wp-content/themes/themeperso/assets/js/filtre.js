@@ -15,19 +15,20 @@ function affiche (){
 function filtre() {
     for (let i = 0; i< filtres.length; i++){
         filtres[i].addEventListener('change', function(){
-            console.log('moi')
             choix.submit()
         })
     }
 }
 filtre()
+
 // slide image miniature 
+
+
 let left = document.getElementById('left')
 let right = document.getElementById('right')
 let miniList = document.getElementsByClassName('miniature')
 let currentSlide = 0
 
-console.log(miniList)
 if(left){
 left.addEventListener("click", function () {
     miniList[currentSlide].classList.remove('activemini')

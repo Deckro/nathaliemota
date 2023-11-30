@@ -32,7 +32,6 @@ for(i=0; i < cadreList.length; i++) {
 
 function openLightbox(lightId){
     console.log(lightId);
-
     let lightBox = document.getElementById(lightId);
     lightBox.classList.add('activebox');
     let close = lightBox.getElementsByClassName('closelightbox')[0];
@@ -45,3 +44,50 @@ function openLightbox(lightId){
 function closeLightbox(lightBox){
     lightBox.classList.remove('activebox');
 }
+
+
+// lightbox change slide
+const lightBoxs = document.getElementsByClassName('lightbox')
+const lightBoxS = document.getElementsByClassName('lightbox_right')
+const lightBoxP = document.getElementsByClassName('lightbox_left')
+console.log(lightBoxP, lightBoxS)
+
+function findcurrentBox(){
+    for(i=0; i < lightBoxs.length; i++){
+        if(lightBoxs[i].classList.contains('activebox')){
+            return i 
+        }
+    }
+}
+
+for(i=0; i < lightBoxP.length; i++){
+    lightBoxP[i].addEventListener("click", function () {
+        let currentBox = findcurrentBox()
+        closeLightbox(lightBoxs[currentBox])
+        if (
+            currentBox <= 0
+        ){
+            currentBox = lightBoxs.length-1
+        }
+        else {
+            currentBox = currentBox-1
+        }
+        openLightbox(lightBoxs[currentBox].id)
+    });}
+
+for(i=0; i < lightBoxS.length; i++){   
+    lightBoxS[i].addEventListener("click", function () {
+        let currentBox = findcurrentBox()
+        closeLightbox(lightBoxs[currentBox])
+        if (
+            currentBox+1 >= lightBoxs.length
+        ){
+            currentBox = 0
+        }
+        else {
+            currentBox = currentBox+1
+        }
+        openLightbox(lightBoxs[currentBox].id)
+    });}
+
+
