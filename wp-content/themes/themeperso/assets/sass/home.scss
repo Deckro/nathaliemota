@@ -2,11 +2,10 @@
     height: 100vh;
     overflow: hidden;
     width: 100%;
-    justify-content: center;
     text-align: center;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 }
 .titre_banner{
     align-items: center;
@@ -18,15 +17,15 @@
     text-stroke: 2px white; -webkit-text-stroke: 2px white;
     text-transform: uppercase;
 }
-.home_galerie{
+.galerie{
     flex-wrap: wrap;
-    justify-content: center;
 }
 .photos{
     margin: 10px;
     flex: 1 1 45%;
     aspect-ratio: 1 / 1;
     position: relative;
+    max-width: 50%;
 }
 .btn{
     width: 260px;
@@ -50,7 +49,6 @@
 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 .selecteur{
     justify-content: space-around;
@@ -91,14 +89,14 @@ option{
     .banner{
         width: 100%;
         height: 250px;
-
+    }
+    .photos{
+        max-width: 90%;
     }
 }
 option:hover {
     background-color: red;
 }
-
-.marge{
-    margin-left: 40px;
-    margin-right: 40px;
+.attachment-full{
+    object-fit: cover;
 }

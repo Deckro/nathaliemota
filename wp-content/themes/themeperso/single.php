@@ -56,51 +56,13 @@
 
 <div class="single marge">
     <p class="vous">VOUS AIMEREZ AUSSI</p>
-    <div class="galerie">
-        <?php 
-            $compteur = 0;                   
-            while ( $galerie->have_posts() ) {  
-                $galerie->the_post();
-                if(get_the_ID()!= $current_post_id){
-                $cacher = $compteur>1?"cacher":"";
-                echo ' <div class="flex photos '.$cacher.'">
-                <div class="hover">
-                    <img id="photo_'.$post->ID.'" class="cadre" src="'.get_template_directory_uri().'/assets/img/icon_fullscreen.svg'.'" alt="">
-                    <a href="'.get_post_permalink().'">
-                        <img class="eye" src="'.get_template_directory_uri().'/assets/img/icon_eye.svg'.'" alt="">
-                    </a>
-                    <p class="titre_img">'.get_the_title().'</p>
-                    <p class="categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
-                </div>
-                <div id="light_'.$post->ID.'" class="lightbox">
-                    <div>
-                        <a class="closelightbox close2">x</a>
-                    </div>
-                    <div class="lightbox_img">
-                        <a class="light" href="'.get_post_permalink().'">
-                        '.get_the_post_thumbnail( get_the_ID(), 'full' ).'
-                        </a>
-                    </div>
-                    <p class="light_titre_img">'.get_the_title().'</p>
-                    <p class="light_categorie_img">'.get_the_terms(get_the_ID(), 'categorie')[0]->name.'</p>
-                    <div class="lightbox_left">
-                        <img class="white light_box_fleche_left" src="'.get_template_directory_uri().'/assets/img/Line6.svg'.'" alt="">
-                        <p class="precedent">precedent</p>
-                    </div>
-                    <div class="lightbox_right">
-                        <p class="suivant">suivant</p>
-                        <img class="light_box_fleche_right" src="'.get_template_directory_uri().'/assets/img/Line7.svg'.'" alt="">
-                    </div>
-                </div>';
-                echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                echo '</div>';  
-                $compteur ++;
-            }} 
-        ?>
-    </div>
+    <?php
+        $miniAffiche = 1;
+    ?>
+    <?php require_once 'template-parts/pages/galerie_single.php'; ?>
 </div>
 <div class="flex center">
-    <button class="btn none" id='tout'>Toutes les photos</button>
+    <button class="btn" id='tout'>Toutes les photos</button>
 </div>
 
 <script>
