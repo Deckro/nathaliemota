@@ -78,10 +78,12 @@
 
 </div>
 </form>
+<div>
 <?php
     $maxAffiche = 11;
 ?>
     <?php require_once 'template-parts/pages/galerie.php'; ?>
+</div>   
 <div class="flex center">
     <button class="btn" id="tout">charger plus</button>
 </div>

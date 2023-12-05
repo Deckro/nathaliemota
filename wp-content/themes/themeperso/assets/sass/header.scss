@@ -44,9 +44,8 @@
         display: block;
         position: absolute;
         right: 9%;
-        top: 6%;
+        top: 1.5%;
         margin: 0;
-        z-index: 1;
     }
     .close.active2{
         opacity: 1;
@@ -74,7 +73,6 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        font-weight: bold;
         font-size: 44px;
         text-transform: uppercase;
         background-color: #E00000;

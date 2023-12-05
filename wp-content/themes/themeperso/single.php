@@ -15,6 +15,7 @@
     $galerie = new WP_Query($args);
     $current_post_id = $post->ID;
 ?>
+
 <div class="single flex marge">
     <div class="top flex">
         <div class="info">

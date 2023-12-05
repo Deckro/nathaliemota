@@ -5,6 +5,7 @@ const choix = document.getElementById('choix')
 
 tout.addEventListener('click', function(){
     affiche ()
+	tout.classList.add('none')
 })
 
 function affiche (){
