@@ -95,8 +95,15 @@ option{
     }
 }
 option:hover {
-    background-color: red;
+    background: #FFD6D6; 
 }
 .attachment-full{
     object-fit: cover;
 }
+option:checked{
+    box-shadow: 0 0 10px 100px #E00000 inset;
+    &:hover{
+        box-shadow: 0 0 10px 100px #FE5858 inset; 
+    }
+}
+

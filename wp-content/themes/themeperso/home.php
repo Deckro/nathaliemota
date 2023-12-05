@@ -48,7 +48,7 @@
  
         <div class="flex select_gauche">
         
-            <select class="filtre" name="catégorie" id="catégorie" onfocus="this.size=6;"onblur="this.size=0;"onchange="this.size=1; this.blur()">
+            <select class="filtre" name="catégorie" id="catégorie" onfocus="this.size=6;"onblur="this.size=1;"onchange="this.size=1; this.blur()">
                 <option value="">Catégorie</option>
                 <?php
                 for($i=0; $i<count($cat); $i++) {
@@ -79,7 +79,7 @@
 </div>
 </form>
 <?php
-    $miniAffiche = 11;
+    $maxAffiche = 11;
 ?>
     <?php require_once 'template-parts/pages/galerie.php'; ?>
 <div class="flex center">

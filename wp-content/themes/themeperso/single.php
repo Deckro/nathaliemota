@@ -57,7 +57,7 @@
 <div class="single marge">
     <p class="vous">VOUS AIMEREZ AUSSI</p>
     <?php
-        $miniAffiche = 1;
+        $maxAffiche = 1;
     ?>
     <?php require_once 'template-parts/pages/galerie_single.php'; ?>
 </div>
